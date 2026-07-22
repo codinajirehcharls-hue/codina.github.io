@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAYGUITARS</title>
+    <style>
+        /* Warm Professional Color Scheme */
+        body {
+            background-color: #fcfaf7; /* Warm creamy off-white background */
+            color: #334155; /* Soft slate text for easy reading */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Elegant Deep Navy Banner with Copper-Gold Accent */
+        .banner {
+            background-color: #0f172a;
+            color: #f59e0b; /* Rich copper-gold */
+            padding: 22px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            border-bottom: 4px solid #d97706;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1e293b;
+            padding: 10px;
+        }
+
+        nav button {
+            background-color: transparent;
+            color: #cbd5e1;
+            border: 1px solid #475569;
+            padding: 10px 24px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        nav button:hover {
+            background-color: #d97706;
+            color: #ffffff;
+            border-color: #d97706;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 920px;
+            margin: 35px auto;
+        }
+
+        /* Container holding photo and text side-by-side */
+        .guitar-row {
+            display: flex;
+            background-color: #ffffff; /* Clean white card inside warm background */
+            border: 1px solid #e2e8f0;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .guitar-row:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Left Side: Photo Frame */
+        .guitar-photo {
+            width: 45%;
+            background-size: cover;
+            background-position: center;
+            min-height: 230px;
+        }
+
+        /* Right Side: Text Block */
+        .guitar-info {
+            width: 55%;
+            padding: 28px;
+            text-align: left;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 4px solid #d97706; /* Warm accent bar */
+        }
+
+        h2 {
+            color: #0f172a;
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #b45309; /* Deep warm amber heading */
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .specs {
+            background-color: #fffbe2; /* Warm amber highlight box */
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #78350f;
+            margin-top: 5px;
+        }
+
+        /* Full width block for simple text pages */
+        .full-info {
+            width: 100%;
+            padding: 35px;
+            text-align: left;
+        }
+
+        /* Page switching logic */
+        .page {
+            display: none;
+        }
+
+        #home {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">BAYGUITARS</div>
+
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('about')">About Us</button>
+        <button onclick="showPage('services')">Services</button>
+        <button onclick="showPage('contact')">Contact</button>
+    </nav>
+
+    <div class="container">
+
+        <!-- HOME PAGE -->
+        <div id="home" class="page">
+            <h2>Musical Masterpieces</h2>
+            <p>Explore our curated selection of iconic instruments in guitar history.</p>
+            <br>
+
+            <!-- Fender Row -->
+            <div class="guitar-row">
+                <div class="guitar-photo" style="background-image: url('https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="guitar-info">
+                    <h3>Fender Stratocaster</h3>
+                    <p>Powered by legendary single-coil pickups. Delivering unmatched clarity and timeless rock history.</p>
+                    <div class="specs">
+                        <b>Pickups:</b> 3 Single-Coils &nbsp;|&nbsp; <b>Tone:</b> Bright & Twangy
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gibson Row -->
+            <div class="guitar-row">
+                <div class="guitar-photo" style="background-image: url('https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="guitar-info">
+                    <h3>Gibson Les Paul</h3>
+                    <p>Classic aesthetic paired with dual humbucker pickups for rich, warm tones and heavy sustain.</p>
+                    <div class="specs">
+                        <b>Pickups:</b> Dual Humbuckers &nbsp;|&nbsp; <b>Aesthetic:</b> Carved Maple Top
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ibanez Row -->
+            <div class="guitar-row">
+                <div class="guitar-photo" style="background-image: url('https://images.unsplash.com/photo-1605020420620-20c943cc4669?q=80&w=1000&auto=format&fit=crop');"></div>
+                <div class="guitar-info">
+                    <h3>Ibanez RG Series</h3>
+                    <p>Engineered for speed and precision. Features ultra-fast necks with responsive floating tremolo systems.</p>
+                    <div class="specs">
+                        <b>Neck Profile:</b> Wizard Thin &nbsp;|&nbsp; <b>Frets:</b> 24 Jumbo
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about" class="page">
+            <div class="guitar-row">
+                <div class="full-info">
+                    <h2>Our Mission</h2>
+                    <p>We are a specialized platform dedicated to showcasing the absolute peak of modern instrument craft and guitar design engineering.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICES PAGE -->
+        <div id="services" class="page">
+            <div class="guitar-row">
+                <div class="full-info">
+                    <h2>Ultra-Premium & Exclusive</h2>
+                    <p>The Guitar Syndicate goes beyond digital curation. We offer highly tailored, end-to-end consulting and experiential services designed exclusively for guitar collectors, professional musicians, and touring artists.</p>
+                    <p>• Custom Electronics & Tone Consulting</p>
+                    <p>• Vintage Instrument Sourcing & Procurement</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact" class="page">
+            <div class="guitar-row">
+                <div class="full-info">
+                    <h2>Connect With Us</h2>
+                    <p><b>Email:</b> codina.jirehcharls@gmail.com</p>
+                    <p><b>Phone:</b> +1 (800) 555-TONE</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Page Navigation -->
+    <script>
+        function showPage(pageId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
